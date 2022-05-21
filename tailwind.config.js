@@ -1,5 +1,12 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
     content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-    theme: {},
-    plugins: [require("daisyui")],
+    theme: {
+        ripple: () => ({
+            colors,
+            
+        }),
+    },
+    plugins: [require("daisyui"), require("tailwindcss-ripple")()],
 };
